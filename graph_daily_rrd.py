@@ -20,6 +20,8 @@ rrdtool.graph(daily_graph,
         'CDEF:heating=indoorTemperature,thermostatState,1,EQ,*',
             'AREA:heating#ffcccc:Furnace On',
         'CDEF:cooling=indoorTemperature,thermostatState,2,EQ,*',
-            'AREA:cooling#ccccff:AC On'
-
+            'AREA:cooling#ccccff:AC On',
+        'GPRINT:indoorTemperature:LAST:Current Indoor Temp\: %2.1lf F',
+        'GPRINT:outdoorTemperature:LAST:Current Outdoor Temp\: %2.1lf F',
+        'GPRINT:setPoint:LAST:Current Set Point\: %2.1lf F',
         )
