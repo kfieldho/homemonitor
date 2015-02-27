@@ -1,5 +1,5 @@
-#power_dir=/home/kfieldho/thermostat
-power_dir=/Users/kfieldho/Projects/Personal/DataAnalysis/homemonitor
+power_dir=/home/kfieldho/thermostat
+#power_dir=/Users/kfieldho/Projects/Personal/DataAnalysis/homemonitor
 
 rrdtool create $power_dir/powerDaily.rrd \
     -s 300 \

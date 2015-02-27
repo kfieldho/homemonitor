@@ -23,3 +23,5 @@ echo "}," >> ${thermostat_log}
 python ${thermostat_dir}/update_rrd.py 
 python ${thermostat_dir}/graph_daily_rrd.py
 curl http://192.168.168.155/api/LiveData.xml 1> ${power_current} 2>> ${power_error} || echo "<powererror>curl_error: Could not connect to thermostat.</powererror>" > ${power_current}
+python ${thermostat_dir}/update_power_rrd.py 
+python ${thermostat_dir}/graph_daily_power_rrd.py
